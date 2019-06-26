@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Bootstrap基础模板</title>
+  <!-- Bootstrap -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- app css -->
+  <link href="../css/app/table_1.css" rel="stylesheet">
+  <!-- 以下2个插件是用于在IE8支持HTML5元素和媒体查询的， 如果不用可移除 -->
+  <!-- 注意： Respond.js不支持file://访问方式 -->
+  <!-- [if lt IE 9]>
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"><script>
+	 <![endif] -->
+     <style>
+        .pagination.square {
+            margin: 0; /*去除外边距 */
+		}
+
+	 </style>
+
+ </head>
+ <body>
+      <h1>Hello, world!</h1>
+	  <div class="modal fade" id="rolePopup">
+          <div class="modal-dialog">
+             <div class="modal-content">
+                 <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Roles of Tom Xu</h4>
+				 </div>
+				 <div class="modal-body">
+                      <table class="table table-hover">
+                          <thead>
+						    <tr>
+                               <th>#</th>
+							   <th>Role</th>
+							   <th>Assign Time</th>
+							</tr>
+						  </thead>
+						  <tbody>
+                             <tr>
+                                <td>1</td>
+								<td>Administrator</td>
+								<td>2011-10-10</td>
+							 </tr>
+							 <tr>
+                                <td>2</td>
+								<td>Editor</td>
+								<td>2011-11-11</td>
+							 </tr>
+						  </tbody>
+					  </table>
+				 </div> <!--modal body -->
+				 <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				 </div> <!-- modal footer -->
+             </div>
+
+		  </div>
+	  </div> <!-- modal rolePopup -->
+       
+	  <div class="modal fade" id="newPopup">
+          <div class="modal-dialog">
+              <div class="modal-content">
+			      <div class="modal-header">
+				    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="H1">Create a new User</h4>
+				  </div>
+				  <div class="modal-body">
+                     <form class="form-horizontal" role="form">
+                         <div class="form-group">
+                             <label for="Email" class="col-sm-2 control-label">Email</label>
+							 <div class="col-sm-10">
+							    <input type="email" class="form-control" id="Email" placeholder="Email">
+							 </div>
+						 </div> <!-- from-group -->
+						 <div class="form-group">
+                             <label for="password" class="col-sm-2 control-label">Password</label>
+							 <div class="col-sm-10">
+                                 <input type="password" class="form-control" id="password" placeholder="password">
+							 </div>
+						 </div> <!-- from-group -->
+						 <div class="form-group">
+                              <div class="col-sm-offset-2 col-sm-10">
+                                   <div class="checkbox">
+                                       <label>
+                                           <input type="checkbox">Enable
+									   </label>
+								   </div>
+							  </div>
+						 </div>
+					 </form>
+					 </div> <!-- modal body -->
+					 <div class="modal-footer">
+                          <button type="button" class="btn btn-success" id="btnCreate">Create</button>
+						  <button type="button" class="btn btn-warning" id="btnReset">Reset</button>
+						  <button type="button" class="btn btn-danger" id="btnCancel" data-dismiss="modal">Cancel</button>
+					 </div>
+              </div>
+          </div> <!-- modal dialog -->
+	  </div> <!-- modal newPopup -->
+
+
+      <div class="panel panel-default">
+          <div class="panel-heading clearfix">
+              <div class="pull-right">
+			    <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle active" id="dropdownMenu1" data-toggle="dropdown">Filter By Disabled<span class="caret"></span>
+			   </button>
+               <ul class="dropdown-menu" role="menu" aira-labelledby="dropdownMenu1">
+                     <li>
+						<a role="menuitem" tabindex="-1" href="#">Filter By Account Status</a>
+					 </li>
+					 <li>
+						<a role="menuitem" tabindex="-1" href="#">Filter By Department</a>
+					 </li>
+					 <li class="divider"></li>
+					 <li>
+						<a role="menuitem" tabindex="-1" href="#">Reset</a>
+					 </li>
+			   </ul>
+              </div>
+			  <div class="btn-group">
+			      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sort By FirstName <span class="caret"></span>
+                  </button>
+				  <ul class="dropdown-menu pull-right" role="menu">
+                        <li><a href="#">Sort By FirstName</a></li>
+						<li><a href="#">Sort By Email</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Reset</a></li>
+
+				  </ul>
+			  </div>	   
+			  </div>
+			  <div class="pull-left">
+                  <button class="btn btn-success" data-toggle="modal" data-target="#newPopup" data-backdrop="static">New</button>
+				  <button class="btn btn-warning">Disable</button>
+				  <button class="btn btn-danger">Delete</button>
+			  </div>
+
+		  </div>
+          <table id="List" class="table table-bordered table-hover">
+               <thead>
+			       <tr class="">
+                      <td class="text-center">
+                         <input type="checkbox"/>
+                      </td>
+					  <td>Name</td>
+					  <td>Birthday</td>
+					  <td>Email</td>
+					  <td>Phone Number</td>
+					  <td class="col-sm-3">Action</td>
+				   </tr>
+			   </thead>
+			   <tbody class="">
+			       <tr>
+                      <td class="text-center">
+                         <input type="checkbox"/>
+					  </td>
+					  <td class="text-center">1</td>
+					  <td>Tom Xu</td>
+					  <td>1982-11-11</td>
+					  <td>tomsu@outlook.com</td>
+					  <td>135816xx8888</td>
+					  <td>
+                         <button class="btn btn-xs btn-info" data-toggle="modal" data-target="#rolePopup"><span class="glyphicon glyphicon-list"></span>Info</button>
+						 <button class="btn btn-xs btn-success" data-toggle="modal" data-target="#rolePopup"><span class="glyphicon glyphicon-user"></span>Role</button>
+						 <div class="btn-group">
+                             <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">More<span class="caret"></span>
+							 </button>
+							 <ul class="dropdown-menu" role="menu">
+                                 <li><a href="#">Action</a></li>
+								 <li><a href="#">Another Action</a></li>
+								 <li><a href="#">Something else here </a></li>
+								 <li class="divider"></li>
+								 <li><a href="#">Separated link</a></li>
+							 </ul>
+						 </div>
+					  </td>
+				   </tr>
+			   </tbody>
+			   <tfoot></tfoot>
+		  </table>
+
+		  <ul class="list-group">
+               <li class="list-group-item">
+                    <ul class="pagination square">
+                        <li class="disabled"><span>Prev</span></li>
+						<li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li class="disabled"><span>...</span></li>
+						<li><a href="#">14</a></li>
+						<li><a href="#">15</a></li>
+						<li><a href="#">16</a></li>
+						<li><a href="#">17</a></li>
+						<li><a href="#">Next</a></li>
+					</ul>
+			   </li>
+		  </ul>
+	  
+      </div>
+	  <!-- 如果要使用Bootstrap的JS插件， 则必须引入jQuery -->
+	  <script src="../js/jquery-3.2.1.min.js"></script>
+	  <!-- Bootstrap的JS插件 -->
+	  <script src="../js/bootstrap.min.js"></script>
+
+ </body>
+</html>

@@ -1,0 +1,42 @@
+$(function() {
+     
+	 function getTree() {
+
+        var data = [
+			{
+             text: "p1",
+		     nodes: [
+					{text: "p1-1",id:'00001', nodeId:'00001'},
+					{text:"p1-2", id:'0002'},
+					{text:"p1-3", id:'00003'},
+					{text:"p1-4", id:'0004',
+						nodes:[
+							{text:'p1-4-1',id:'00005'}
+						]
+					}
+					]
+			}
+			]
+				 return data;
+	 }
+
+     var obj={};
+	 obj.text = "123";
+	 $('#tree').treeview({
+        data: getTree(),
+	    levels: 5,
+		multiSelect: true
+
+	 });
+
+	 $('#btn').click(function(e){
+        var arr= $('#tree').treeview('getSelected');
+
+		alert(JSON.stringify(arr));
+		for(var key in arr){
+             alert(arr[key].id);
+		}
+
+	 })
+
+});

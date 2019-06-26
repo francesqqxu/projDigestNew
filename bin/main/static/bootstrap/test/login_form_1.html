@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Bootstrap基础模板</title>
+  <!-- Bootstrap -->
+  <!--
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  -->
+  <!--用百度的静态资源库的cdn安装bootstrap环境-->
+  <!--Bootstrap核心CSS文件-->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- font-awesome 核心CSS文件-->
+  <link href="../css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- 以下2个插件是用于在IE8支持HTML5元素和媒体查询的， 如果不用可移除 -->
+  <!-- 注意： Respond.js不支持file://访问方式 -->
+  <!-- [if lt IE 9]>
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"><script>
+	 <![endif] -->
+	 <style type="text/css">
+          body{background: url(../img/4.jpg) no-repeat;background-size:cover;font-size:16px;}
+		  .form{background:rgba(255,255,255,0.2);width:400px;margin:100px auto;}
+		  #login_form{diaplay: block;}
+		  
+		  .fa{display:inline-block;top:27px;left:6px;position:relative;color:#ccc;}
+		  
+		  input[type="text"],input[type="password"]{padding-left:26px;}
+	      
+		  .checkbox{padding-left:21px;}
+	 </style>
+ </head>
+ <body>
+      <h1>Hello, world!</h1>
+      <!--
+        基础知识：
+		      网格系统：通过行和列布局
+			  行必须放在containter内
+			  手机：col-xs-*
+			  平板：col-sm-*
+			  笔记本和普通台式电脑col-md-*
+			  大型台式电脑：col-lg-*
+
+
+	  -->
+      <div class="container">
+          <div class="form row">
+             <form class="form-horizontal col-sm-offset-3 col-md-offset-3" id="login_form">
+				<h3 class="form-title">Login to your account</h3>
+				   <div class="col-sm-9 col-md-9">
+				     <div class="form-group">
+						 <i class="fa fa-user fa-log"></i>
+						 <input class="form-control required" type="text" placeholder="Username" name="username" autofocus="autofocus" maxlength="20"/>
+
+					</div>
+					<div class="form-group">
+						  <i class="fa fa-lock fa-log"></i>
+						  <input class="form-control required" type="password" placeholder="password" name="password" maxlength="8"/>
+					</div>
+
+					<div class="form-group">
+                         <label class="checkbox">
+							<input type="checkbox" name="remember" value="1"/>Remember me 
+						 </label>
+						 <hr />
+						 <a href="javascript:;" id="register_btn" class="">Create an account </a>
+					</div>
+					
+                  </div>
+			 </form>
+          </div>
+	  </div>
+
+
+
+
+
+	  <!-- 如果要使用Bootstrap的JS插件， 则必须引入jQuery -->
+	  <script src="../js/jquery-3.2.1.min.js"></script>
+	  <!-- Bootstrap的JS插件 -->
+	  <script src="../js/bootstrap.min.js"></script>
+      <!-- jquery.validate-->
+	  <script type="text/javascript" src="../js/jquery.validate.min.js"></script>
+	  <script type="text/javascript" src="../js/messages_uk.min.js"></script>
+
+ </body>
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Bootstrap基础模板</title>
+  <!-- Bootstrap -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- 以下2个插件是用于在IE8支持HTML5元素和媒体查询的， 如果不用可移除 -->
+  <!-- 注意： Respond.js不支持file://访问方式 -->
+  <!-- [if lt IE 9]>
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"><script>
+	 <![endif] -->
+  <style>
+     .labelshowset {
+       margin-left: -1em;
+	   margin-right: -1.2em;
+	   color:#000000;
+	 }
+	 .formfontset {
+	   font-family:宋体;
+	 }
+  </style>
+
+ </head>
+ <body>
+      <h1>Hello, world!</h1>
+      <form class="form-horizontal formfontset" role="form">
+          <div class="panel panel-success">
+               <div class="panel-heading">
+                    <h3 class="panel-title">贷款信息 </h3>
+			   </div>
+               
+			   <div class="panel-body">
+                   <div class="form-group">
+                      <div class="col-sm-2 control-label labelshowset">姓名:</div>
+					  <div class="col-sm-4">
+                         <input type="text" class="form-control" placeholder="姓名"/>
+					  </div>
+					  <div class="col-sm-2 control-label labelshowset">性别:</div>
+					  <div class="col-sm-4">
+                          <select class="form-control">
+                              <option>
+							  </option>
+						  </select>
+					  </div>
+				   </div>  <!--from-group -->
+                   <div class="form-group">
+                       <div class="col-sm-2 control-label labelshowset">身份证号: </div>
+					   <div class="col-sm-4">
+                           <input type="text" class="form-control" placeholder="身份证号"/>
+					   </div>
+					   <div class="col-sm-2 control-label labelshowset">婚姻状态 </div>
+					   <div class="col-sm-4">
+                            <select class="form-control">
+                                 <option> </option>
+							</select>
+					   </div>
+				   </div> <!-- form-group -->
+                   
+				   <div class="form-group">
+                        <div class="col-sm-2 control-label labelshowset">固定电话： </div>
+						<div class="col-sm-4">
+                           <div class="col-sm-5" style="padding:0em;">
+                              <input type="text" class="form-control"/>
+						   </div>
+						   <div class="col-sm-7" style="padding:0em;">
+                              <input type="text" class="form-control"/>
+						   </div>
+						</div>
+						<div class="col-sm-2 control-label labelshowset">联系手机： </div>
+						<div class="col-sm-4">
+                           <input type="text" class="form-control" placeholder="联系手机"/>
+						</div>
+				   </div>
+                   <div class="form-group">
+                        <div class="col-sm-2 control-label labelshowset">QQ号码: </div>
+						<div class="col-sm-4">
+                              <input type="text" class="form-control" />
+						</div>
+						<div class="col-sm-2 control-label labelshowset">电子邮箱: </div>
+						<div class="col-sm-4">
+                             <input type="text" class="form-control"/>
+						</div>
+				   </div>
+                   <div class="form-group">
+                        <div class="col-sm-2 control-label labelshowset">户口类型: </div>
+					    <div class="col-sm-4">
+                            <select class="form-control">
+                                <option></option>
+							</select>
+						</div>
+						<div class="col-sm-2 control-label labelshowset">学历: </div>
+						<div class="col-sm-4">
+                             <select class="form-control">
+							     <option></option>
+							 </select>
+						</div>
+				   </div>
+				   <div class="form-group">
+                       <div class="col-sm-2 control-label labelshowset">子女个数: </div>
+					   <div class="col-sm-4">
+                           <input type="text" class="form-control"/>
+					   </div>
+					   <div class="col-sm-2 control-label labelshowset">居住状况:  </div>
+					   <div class="col-sm-4">
+                            <select  class="form-control">
+                                <option></option>
+							</select>
+					   </div>
+				   </div>
+                   <div class="form-group">
+                      <div class="col-sm-2 control-label labelshowset">现居住地址: </div>
+					  <div class="col-sm-10">
+                         <div class="col-sm-2" style="padding-left:0em;">
+                           <select class="form-control">
+                               <option></option>
+						   </select>
+						 </div>
+						 <div class="col-sm-2" >
+                            <select class="form-control">
+                                <option></option>
+							</select>
+						 </div>
+						 <div class="col-sm-2" >
+                             <select class="form-control">
+                                <option></option>
+							 </select>
+						 </div>
+                         <div class="col-sm-5"   >
+                             <input type="text" class="form-control"/>
+						 </div>
+						  
+					  </div>
+				   </div>
+                    
+					<div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-2" style="padding-left:0em;">
+                            <div class="checkbox">
+                               <label>
+                                    <input type="checkbox">请记住我
+							   </label>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="form-group">
+					   <div class="col-sm-offset-2 col-sm-2" style="padding-left:0em;" >
+                           <button type="button"  class="btn btn-default btn-cancel">取消</button>
+					   </div>
+ 
+				   </div>
+			   </div> <!-- panel-body -->
+
+		  </div>
+
+	  </form>
+
+	  <!-- 如果要使用Bootstrap的JS插件， 则必须引入jQuery -->
+	  <script src="../js/jquery.js"></script>
+	  <!-- Bootstrap的JS插件 -->
+	  <script src="../js/bootstrap.min.js"></script>
+
+ </body>
+</html>

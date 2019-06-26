@@ -1,0 +1,66 @@
+//InfoModal类定义
+var InfoModal = function(element, options){
+    this.$element = $(element);
+
+    this.super = this.$element.data('bs.modal');
+    this.options = options;
+
+    this.$element.on('click.confirm.infomodal','[data-info="confirm"]',
+		$.proxy(this.confirm, this));
+
+    this.$element.on('click.cancel.infomodal','[data-info="cancel"]',
+                $.proxy(this.cancel,this));
+
+    var that = this;
+}
+
+//默认设置
+InfoModal.DEFAULTS = {
+      closeAfterConfirm: false,
+      closeAfterCancel:true
+}
+
+//反转弹窗状态
+InfoModal.prototype.toggle = function(_relatedTarget) {
+     //如果是关闭状态， 则打开弹窗， 否则关闭
+     return this[!this.super.isShown ? 'show': 'hide'](_relatedTarget);
+}
+
+//打开弹窗
+InfoModal.prototype.show = function(_relatedTarget) {
+      this.super.show(_relatedTarget);
+}
+
+//关闭弹窗
+InfoModal.prototype.hide = function(e) {
+   if(e) e.preventDefault();
+   this.super.hide();
+}
+
+//单击“确认”按钮的行为
+InfoModal.prototype.confirm = function(e) {
+    if(e) e.preventDefault(); 
+
+    var e = $.Event('confirm.bs.infomodal');
+    this.$element.trigger(e);
+
+    if(e.isDefaultPrevented()) return;
+    if(this.options.closeAfterConfirm) {
+          this.hide();
+    }
+}
+
+//单击"取消“按钮的行为
+InfoModal.prototype.cancel = function(e) {
+    if(e) e.preventDefault();
+
+    var e = $.Event('cancel.bs.infomodal');
+    this.$element.trigger(e);
+
+    if(e.isDefaultPrevented()) return;
+
+    if(this.options.closeAfterCancel) {
+	this.hide(e);
+    }
+}
+

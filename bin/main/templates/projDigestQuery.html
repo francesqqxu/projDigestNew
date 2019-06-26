@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="projDigest_list"></div>
+
+	<div id="projDigest_list_tool">
+	   <div>
+      		<a id="projDigest_list_tool_add"  href="#">添加</a>
+       		<a id="projDigest_list_tool_update"  href="#">修改</a>
+       		<a id="projDigest_list_tool_delete"  href="#">删除</a>
+       		
+	   </div>     
+	       
+	   <table>
+	     <tr>
+	     <td>
+	      	所属LOB:<input type="text" name="projDigest_list_tool_search_lob" id="projDigest_list_tool_search_lob" style="width:110px">
+	     </td>
+	     <td>
+	    	项目成果ID:<input class="easyui-textbox" name="projDigest_list_tool_search_projOutcomeId" id="projDigest_list_tool_search_projOutcomeId" style="width:110px">
+	     </td>
+	     <td>
+	    	项目名称: <input class="easyui-textbox" name="projDigest_list_tool_search_projName"  id="projDigest_list_tool_search_projName" style="width:110px">
+	     </td>
+	     <td>	
+	    	项目编号:<input class="easyui-textbox" name="projDigest_list_tool_search_projNum" id="projDigest_list_tool_search_projNum" style="width:110px">
+	     </td>
+	     <td>
+	       	关键字:<input class="easyui-textbox" name="projDigest_list_tool_search_keyWord" id="projDigest_list_tool_search_keyWord" style="width:110px">
+	     </td>
+         <td>
+	      <a id="projDigest_list_tool_search" href="#">查询</a>
+	     </td>
+	     <td>
+	     <a id="projDigest_list_tool_clear" href="#">清除查询条件</a>
+	     </td>
+	      
+	     </tr>
+	   </table>
+	    
+	</div>
+	
+	
+	
+	<div style="margin:20px 0;"></div>
+	<div class="easyui-dialog" id="dg" style="width:1100px;" data-options="closed:true,model:true, buttons: '#dg-buttons'">
+	    <form id="projDigest_fm">
+	     <p><input type="hidden" name="id" id="id"></p>
+	     <p><input type="hidden" name="isImport" id="isImport" th:value="0"><p>
+	     
+	     <table style="border-collapse:separate; border-spacing:10px;">
+	     <tbody>     
+              <tr>
+              <td>项目成果ID:</td> 
+              <td><input  class="easyui-textbox"  name="projOutcomeId"   id="projOutcomeId" data-options="required:true" style="width:300px"/></td>
+              <td> </td>
+              <td> </td>
+              <td>所属LOB:</td> 
+              <td><input  class="easyui-textbox" name="lob" id="lob"  data-options="required:true"  style="width:300px" /></td>
+              </tr> 
+              
+              <tr>
+              <td>项目名称:</td> 
+              <td><input class="easyui-textbox"  name="projName"  id="projName" data-options="required:true"  style="width:300px"/></td>
+              <td></td>
+              <td></td>
+              <td>项目编号:</td> 
+              <td><input class="easyui-textbox"  name="projNum" id="projNum" data-options="required:true"  style="width:300px" /></td>
+        	  </tr>
+        	  
+        	  <tr>
+              <td>客户名称:</td> 
+              <td><input class="easyui-textbox"  name="custName"   id="custName" data-options="required:true"  style="width:300px"/></td>
+              <td></td>
+              <td></td>
+              <td>项目简介:</td> 
+              <td><input class="easyui-textbox" name="projBrief"   id="projBrief" data-options="required:true"  style="width:300px" /></td>
+        	  
+        	  </tr>
+        	  
+        	  <tr>
+              <td>项目开始日期:</td> 
+              <td><input class="easyui-datebox"  name="projBeginDate"   id="projBeginDate" data-options="required:true,validType:'date'"  style="width:300px"/></td>
+              <td></td>
+              <td></td>
+              <td>项目关闭日期:</td> 
+              <td><input class="easyui-datebox"  name="projEndDate"   id="projEndDate"  data-options="required:true,validType:'date'" style="width:300px" /></td>
+        	 
+        	  </tr>
+        	  
+        	  <tr>
+              <td>归档SVN路径:</td> 
+              <td><input  class="easyui-textbox"  name="archivePath"  id="archivePath" data-options="required:true"  style="width:300px"/></td>
+              <td></td>
+              <td></td>
+              <td>项目经理姓名:</td> 
+              <td><input  class="easyui-textbox"  name="projManagerName" id="projManagerName" data-options="required:true"  style="width:300px" /></td>
+        	  
+        	  </tr>
+        	  
+        	  <tr>
+              <td>项目经理ID:</td> 
+              <td><input  class="easyui-textbox" name="projManageId"  id="projManageId" data-options="required:true"  style="width:300px"/></td>
+              <td></td>
+              <td></td>
+              <td>项目经理电话:</td> 
+              <td><input  class="easyui-textbox" name="projManageTel"  id="projManageTel" data-options="required:true"  style="width:300px" /></td>
+        	  
+        	  </tr>
+        	  
+        	  <tr>
+              <td>项目经理邮箱:</td> 
+              <td><input  class="easyui-textbox" name="projManageEmail"  id="projManageEmail" data-options="required:true,validType:'email'"  style="width:300px"/></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td> 
+              <td></td>
+        	  
+        	  </tr>
+        	  
+        	  <tr>
+              <td>行业:</td> 
+              <td><input class="easyui-textbox"  name="industryCategory"  id="industryCategory" data-options="required:true"  style="width:200px"/></td>
+          	  <td>领域:</td>
+          	  <td><input class="easyui-textbox" name="fieldCategory"  id="fieldCategory" data-options="required:true"  style="width:200px"/></td>
+          	  <td>应用:</td>
+          	  <td><input class="easyui-textbox"  name="applicationCategory"  id="applicationCategory" data-options="required:true"  style="width:200px"/></td>
+          	  </tr>
+          	  
+          	  <tr>
+          	  <td>    </td>
+          	  <td><a href="#" class="easyui-linkbutton"  id="btnAddIndustry"  data-options="required:true,iconCls:'icon-add'" style="width:100px">新加行业</a></td>
+          	  <td>    </td>
+          	  <td><a href="#" class="easyui-linkbutton"  id="btnAddField"  data-options="required:true,iconCls:'icon-add'" style="width:100px">新加领域</a></td>
+          	  <td>    </td>
+          	  <td><a href="#" class="easyui-linkbutton"  id="btnAddApp"  data-options="required:true,iconCls:'icon-add'" style="width:100px">新加应用</a></td>
+          	  
+          	  </tr>
+          	  <tr> 
+              <td>编程语言:</td> 
+              <td><input class="easyui-textbox"  name="usedLanguage"  id="usedLanguage" data-options="required:true"  style="width:300px" /></td>
+        	  <td></td>
+              <td></td>
+              <td>系统软件:</td> 
+              <td><input class="easyui-textbox"  name="systemSoft"   id="systemSoft"  data-options="required:true" style="width:300px"/></td>
+              </tr>
+              
+              <tr>
+              <td>系统硬件:</td> 
+              <td><input class="easyui-textbox"  name="systemHard"  id="systemHard" data-options="required:true"  style="width:300px" /></td>
+        	  <td></td>
+              <td></td>
+              <td>数据库:</td> 
+              <td><input class="easyui-textbox"  name="usedDatabase"  id="usedDatabase" data-options="required:true"  style="width:300px"/></td>
+              </tr>
+              
+              <tr>
+              
+              <td>测试框架:</td> 
+              <td><input class="easyui-textbox"  name="testFramework"  id="testFramework" data-options="required:true"  style="width:300px" /></td>
+        	  <td></td>
+              <td></td>
+        	   
+              <td>其他关键技术:</td> 
+              <td><input class="easyui-textbox"  name="keyTechSkills" id="keyTechSkills" data-options="required:true"  style="width:300px"/></td>
+               
+        	  </tr>
+         
+	    </tbody>
+	    </table>
+	    </form>
+	
+	</div>
+    
+    <div id="dg-buttons">
+        <a id="projDigest_add_submit" class="easyui-linkbutton" data-options="iconCls: 'icon-ok'" href="#">提交</a>
+        <a id="projDigest_add_cancel" class="easyui-linkbutton" data-options="iconCls: 'icon-cancel'" href="#">取消</a>
+    </div>
+ 
+<script type="text/javascript" th:src="@{/app/js/projDigestList.js}"></script>
+</body>
+</html>

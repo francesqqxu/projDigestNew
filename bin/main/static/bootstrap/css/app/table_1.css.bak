@@ -1,0 +1,11 @@
+.pagination.square {
+
+    margin: 0; 
+}
+
+.pagination.square > li > a,
+.pagination.square > li > span {
+
+      margin: 0 5px;
+	  border: 1px solid #dddddd;
+}

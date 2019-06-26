@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$.Event</title>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+   <input type="text" id="input-1"/>
+   <script>
+        $(function() {
+              var e = jQuery.Event("keydown",{name:65});
+	      $('#input-1').on("keydown",function(event){
+                   console.log(event.name);
+				   $('#input-1').val()  = event.name;
+	      });
+
+	      $('#input-1').trigger(e);
+	});
+
+   </script>
+
+
+ 
+</body>
+
+</html>
+

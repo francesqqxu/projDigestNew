@@ -1,0 +1,85 @@
+.tile {
+    position: relative;
+	overflow: hidden;
+	display: block;
+	float: left;
+	width: 120px;
+	height: 120px;
+	margin: 0 10px 10px 0; /*设置右外边距和底部外边距  */
+    padding: 0;
+	cursor: pointer;
+	background-color: #eeeeee;
+	box-shadow: inset 0px 0px 1px #FFFFCC;
+}
+
+.tile:hover {
+   outline: #999999 solid 3px;
+}
+
+.tile:no-outline {
+   outline-color: transparent;
+}
+
+/*背景色*/
+.bg-red{background-color: #e51400 }
+.bg-green{background-color: #60a917 }
+.bg-darkBlue{background-color: #16499a }
+
+.fg-red{color: #e51400 }
+.fg-green{color: #60a917 }
+.fg-darkBlue{color: #16499a }
+
+.ol-red{outline-color: #e51400 }
+.ol-green{outline-color: #60a917 }
+.ol-darkBlue{outline-color: #16499a }
+
+.bd-red{border-color: #e51400 }
+.bd-green{border-color: #60a917 }
+.bd-darkBlue{border-color: #16499a }
+
+.tile.select{
+  border:4px #4390df solid;
+}
+
+.tile.select:after{
+   position: absolute;
+   display: block;
+   border-top: 28px solid #4390df;
+   border-left: 28px solid transparent;
+   right: 0;
+   top: 0;
+   content; "";
+   z-index: 101;
+}
+
+.tile.selected:before{
+  position: absolute;
+  display: block;
+  content: "\e013";
+  color:#fff;
+  right:0;
+  top: 0;
+  font-family:Glyphicons Halflings;
+  font-size: 10pt;
+  font-weight: normal;
+  z-index: 102;
+
+}
+
+.tile .tile-content {	
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+
+.tile .tile-content.image{
+	width: 100%;
+	min-height:100%;
+
+}

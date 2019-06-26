@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Bootstrap基础模板</title>
+  <!-- Bootstrap -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../datatable/bootstrap-table.css" rel="stylesheet">
+  <!-- 以下2个插件是用于在IE8支持HTML5元素和媒体查询的， 如果不用可移除 -->
+  <!-- 注意： Respond.js不支持file://访问方式 -->
+  <!-- [if lt IE 9]>
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"><script>
+	 <![endif] -->
+ </head>
+ <body>
+      <h1>Hello, world!</h1>
+          <div class="container">
+              <h1 class="text-center text-danger">From Example</h1>
+			  <form role="form" class="form-horizontal" action="javascript:alert('验证成功,可以提交.');" method="post">
+                   <div class="form-group">
+                       <label class="col-sm-2 control-label" for="name">Name</label>
+					   <div class="col-sm-10">
+                            <input class="form-control" name="name" type="text" id="name" placeholder="Name" value=""/>
+					   </div>
+                   </div> <!--from-group -->
+
+                   <div class="form-group">
+                        <label class="col-sm-2 control-label" for="password1">Password</label>
+						<div class="col-sm-10">
+                            <input type="password" name="password" class="form-control" id="password1" placeholder="Password">
+						</div>
+				   </div> <!-- from-group -->
+
+				   <div class="form-group">
+                       <label for="intro" class="control-label col-sm-2">Intro</label>
+					   <div class="col-sm-10">
+                          <textarea id="intro" class="form-control" name="intro" placeholder="Intro"></textarea>
+						 
+					   </div>
+				   </div> <!-- from-group -->
+
+				   <div class="form-group">
+                      <label class="col-sm-2 control-label">Gender</label>
+					  <div class="col-sm-10">
+                           <label class="radio-inline">
+                                <input type="radio" name="gender" value="male"/>
+                                boy
+						   </label>
+						   <label class="radio-inline">
+                               <input type="radio" name="gender" value="femal"/>gril
+						   </label>
+					  </div>
+				   </div> <!-- form-group -->
+
+				   <div class="form-group">
+				      <label for="hobby" class="col-sm-2 control-label">Hobby</label>
+					  <div class="col-sm-10">
+                          <div class="checkbox">
+                              <label>
+                                 <input type="checkbox" name="hobby" value="Music">Music
+							  </label>
+						  </div>
+						  <div class="checkbox">
+                             <label>
+                                 <input type="checkbox" name="hobby" id="" value="Game"/>Game
+							 </label>
+						  </div>
+
+						  <label class="checkbox-inline">
+                             <input type="checkbox" id="inlineChkBox1" value="option1">option1
+						  </label>
+						   <label class="checkbox-inline">
+                             <input type="checkbox" id="inlineChkBox2" value="option2">option2
+						  </label>
+						   <label class="checkbox-inline">
+                             <input type="checkbox" id="inlineChkBox3" value="option3">option3
+						  </label>
+					  </div>
+
+				   </div> <!-- from-group -->
+
+				   <div class="form-group">
+                       <div class="col-sm-offset-2 col-sm-10">
+					      <button type="submit" class="btn btn-primary btn-sm">
+                          Submit
+						  </button>
+						  <button type="reset" class="btn btn-primary btn-sm">
+						  Reset
+						  </button>
+					   </div>
+				   </div>
+
+              </form>
+
+		  </div>
+      
+	  <!-- 如果要使用Bootstrap的JS插件， 则必须引入jQuery -->
+	  <script src="../js/jquery-3.2.1.min.js"></script>
+	  <!-- Bootstrap的JS插件 -->
+	  <script src="../js/bootstrap.min.js"></script>
+	  <script src="../datatable/bootstrap-table.js"></script>
+      <script src="../datatable/bootstrap-table-zh-CN.js"></script>
+	  <script src="../js/jquery.validate.min.js"></script>
+
+      <script src="../js/app/bootstrap_form_validation.js"></script>
+	  
+	   
+	 
+
+ </body>
+</html>

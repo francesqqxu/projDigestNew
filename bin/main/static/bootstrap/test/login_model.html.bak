@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Bootstrap基础模板</title>
+  <!-- Bootstrap -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- 以下2个插件是用于在IE8支持HTML5元素和媒体查询的， 如果不用可移除 -->
+  <!-- 注意： Respond.js不支持file://访问方式 -->
+  <!-- [if lt IE 9]>
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"><script>
+	 <![endif] -->
+  <style>
+     #loginModal{
+         position: absolute;
+		 top: 50%;
+		 -webkit-transform: translateY(-50%);
+		 -moz-transform: translateY(-50%);
+		 -ms-transform: translateY(-50%);
+		 -o-transform: translateY(-50%);
+		 transform: translateY(-50%);
+		 background-color: #eee;
+	 }
+  </style>
+
+ </head>
+ <body>
+      <h1>Hello, world!</h1>
+      <!--使用模态框的方式模拟一个登录框-->
+	  <div class="modal show" id="loginModal">
+         <div class="modal-dialog">
+             <div class="modal-content">
+			      <div class="modal-header">
+                       <button type="button" class="close">&times</button>
+				       <h1 class="text-center text-primary">登录</h1>
+				  </div>
+				  <div class="modal-body">
+                        <form class="" id="loginForm" action="" method="post">
+                              <div class="form-group-lg" id="addcountDiv">
+							      <label class="sr-only" for="inputAccount">账户</label>
+                                  <div class="input-group">
+                                     <div class="input-group-addon">
+									      <span class="glyphicon glyphicon-user" aria-hiddden="true"> </span>
+									 </div>
+									 <input class="form-control" id="inputAccount" namd="accountNo" type="text" placeholder="账户" required autofocus>
+								  </div>
+								  <div class="hidden text-center" id="accountMsg">
+								     <span class="glyphicon glyphicon-exclamation-sign"> </span>
+									 用户名不存在
+								  </div>
+							  </div>
+                              <br>
+							  <div class="form-group-lg" id="pwdDiv">
+                                  <label class="sr-only" for="inputPassword">密码 </label>
+								  <div class="input-group">
+                                     <div class="input-group-addon">
+									    <span class="glyphicon glyphicon-lock"></span>
+                                     </div>
+									 <input class="form-control" id="inputPassword" name="inputPassword" type="password" placeholder="密码" required>
+									 <div class="input-group-addon">
+									    <span class="glyphicon glyphicon-eye-open"></span>
+									 </div>
+								  </div>
+								  <div class="hidden text-center" id="pwdMsg">
+								       <span class="glyphicon glyphicon-exclamation-sign"></span>
+									   用户密码错误
+								  </div>
+							  </div>
+                              <div class="checkbox">
+                                   <label><input type="checkbox" value="remember-me">记住我 </label>
+							  </div>
+							  <div class="form-group">
+							      <button class="btn btn-default btn-lg col-sm-6" id="btn-register" type="submit">注册</button>
+								  <button class="btn btn-primary btn-lg col-sm-6" id="btn-login" type="button">登录</button>
+							  </div>
+						</form>
+				  </div> <!--modal-body -->
+				  <div class="modal-footer">
+
+				  </div>
+             </div> <!--modal-content -->
+         </div> <!-- modal-dialog-->
+	  </div> <!-- modal -->
+
+	  <!-- 如果要使用Bootstrap的JS插件， 则必须引入jQuery -->
+	  <script src="../js/jquery.js"></script>
+	  <!-- Bootstrap的JS插件 -->
+	  <script src="../js/bootstrap.min.js"></script>
+
+ </body>
+</html>

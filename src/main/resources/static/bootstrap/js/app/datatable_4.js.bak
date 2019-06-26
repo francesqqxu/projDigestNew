@@ -1,0 +1,26 @@
+$(function() {
+
+    var $table=$('#table');
+
+	$.ajax({
+        url: 'http://localhost:8080/php/index.php',
+		type: 'post',
+		dataType: 'json',
+		beforeSend: function(){
+           $('#table').append('<div class="loader"><div class="loader-inner ball-pulse"></div>
+			   </div>' );
+
+		},
+		success: function(d) {
+           setTimeout(function() {
+              $table.bootstrapTable({
+			     data: d
+			  });
+		   },2000);
+		}
+	});
+
+    $('#button').click(function(){
+	    $table.bootstrapTable('refresh',{url:'index.php'});
+	});
+});

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<div>
+	<a href="#" class="easyui-linkbutton"  id="btnOpenDialog"  data-options="iconCls:'icon-add'" style="width:200px">导入项目摘要</a>
+</div> 
+
+<div class="easyui-dialog" id="dg_fileUpload" style="width:400px; height:200px;" data-options="closed:true,model:true, buttons: '#dg-buttons'">
+<input type="file" name="multiFileUpload" id="multiFileUpload" multiple="multiple">
+<!-- 
+<button type="submit" id="btnUpload">导入</button>
+ -->
+</div>	      
+
+ <div id="dg-buttons">
+        <a id="multiFileUpload_submit" class="easyui-linkbutton" data-options="iconCls: 'icon-ok'" href="#">提交</a>
+        <a id="multiFileUpload_cancel" class="easyui-linkbutton" data-options="iconCls: 'icon-cancel'" href="#">取消</a>
+</div> 
+ 
+<script th:src="@{/app/js/multiUpload.js}"></script>
+</body>
+</html>
