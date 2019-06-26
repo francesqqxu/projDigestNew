@@ -1,2 +1,2 @@
 # projDigestNew
-spring boot 
+spring boot  mybatis easyui
